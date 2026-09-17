@@ -1,0 +1,31 @@
+<section class="intro" aria-labelledby="intro-title">
+  <p class="eyebrow">写作存档</p>
+  <h1 id="intro-title">把想明白的事，认真写下来。</h1>
+  <p>这里记录值得反复思考的问题，以及逐渐清晰的答案。</p>
+</section>
+
+<section class="post-list" aria-labelledby="recent-posts">
+  <div class="section-heading">
+    <h2 id="recent-posts">近期文章</h2>
+    <a href="<%= url_for('/archives/') %>">查看全部</a>
+  </div>
+
+  <% if (page.posts.length) { %>
+    <% page.posts.each(function(post) { %>
+      <article class="post-card">
+        <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'YYYY.MM.DD') %></time>
+        <h3><a href="<%= url_for(post.path) %>"><%= post.title %></a></h3>
+        <p><%= post.description || truncate(strip_html(post.excerpt || post.content), { length: 116 }) %></p>
+        <a class="read-more" href="<%= url_for(post.path) %>" aria-label="阅读《<%= post.title %>》">阅读全文<span aria-hidden="true"> →</span></a>
+      </article>
+    <% }); %>
+  <% } else { %>
+    <p class="empty-state">第一篇文章正在路上。</p>
+  <% } %>
+
+  <% if (page.total > 1) { %>
+    <nav class="pagination" aria-label="文章分页">
+      <%- paginator({ prev_text: '← 较新文章', next_text: '更早文章 →' }) %>
+    </nav>
+  <% } %>
+</section>

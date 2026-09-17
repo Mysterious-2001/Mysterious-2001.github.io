@@ -1,0 +1,22 @@
+<section class="archive" aria-labelledby="archive-title">
+  <header class="archive-header">
+    <p class="eyebrow">全部文章</p>
+    <h1 id="archive-title"><%= page.archive ? '写作归档' : page.title %></h1>
+    <p>共 <%= site.posts.length %> 篇，按时间倒序排列。</p>
+  </header>
+
+  <div class="archive-list">
+    <% page.posts.each(function(post) { %>
+      <article class="archive-item">
+        <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'YYYY.MM.DD') %></time>
+        <h2><a href="<%= url_for(post.path) %>"><%= post.title %></a></h2>
+      </article>
+    <% }); %>
+  </div>
+
+  <% if (page.total > 1) { %>
+    <nav class="pagination" aria-label="归档分页">
+      <%- paginator({ prev_text: '← 上一页', next_text: '下一页 →' }) %>
+    </nav>
+  <% } %>
+</section>

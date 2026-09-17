@@ -1,0 +1,18 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171816" media="(prefers-color-scheme: dark)">
+  <% const pageTitle = page.title ? `${page.title} · ${config.title}` : `${config.title} · ${config.subtitle}`; %>
+  <% const pageDescription = page.description || config.description; %>
+  <title><%= pageTitle %></title>
+  <meta name="description" content="<%= strip_html(pageDescription) %>">
+  <meta name="author" content="<%= config.author %>">
+  <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>">
+  <meta property="og:title" content="<%= pageTitle %>">
+  <meta property="og:description" content="<%= strip_html(pageDescription) %>">
+  <meta property="og:url" content="<%= full_url_for(page.path || '') %>">
+  <link rel="canonical" href="<%= full_url_for(page.path || '') %>">
+  <link rel="icon" type="image/svg+xml" href="<%= url_for('/favicon.svg') %>">
+  <link rel="stylesheet" href="<%= url_for('/css/style.css') %>">
+</head>

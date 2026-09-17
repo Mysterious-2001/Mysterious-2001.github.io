@@ -1,0 +1,5 @@
+# 把公开的 Notion 页面地址填在引号里，例如：
+# notion_url: "https://your-name.notion.site/your-page"
+notion_url: ""
+
+footer_text: 保持思考，持续写作。

@@ -1,0 +1,29 @@
+{
+  "name": "mysterious-2001-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mysterious-2001 的个人写作博客",
+  "scripts": {
+    "clean": "hexo clean",
+    "build": "hexo generate",
+    "dev": "hexo server",
+    "new": "hexo new"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "hexo": "^8.1.2",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-sitemap": "^3.0.1",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-server": "^3.0.0"
+  },
+  "hexo": {
+    "version": "8.1.2"
+  }
+}
