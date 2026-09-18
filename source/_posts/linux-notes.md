@@ -5,7 +5,7 @@ updated: 2024-09-09 22:09:34
 description: "Linux一些常见的命令"
 permalink: "2024/09/09/Linux笔记/"
 categories:
-  - "技术"
+  - "专业知识"
 tags:
   - "Linux"
 ---

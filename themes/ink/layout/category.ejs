@@ -1,1 +1,37 @@
-<%- partial('archive') %>
+<%
+  const categoryName = page.category || page.title;
+  const categoryDescriptions = {
+    '生活思考': '关于日常体验、关系、自我认识，以及那些值得慢下来想一想的问题。',
+    '专业知识': '关于技术、学习方法与实践经验，尽量把复杂问题讲清楚。'
+  };
+  const categoryDescription = categoryDescriptions[categoryName] || '同一主题下的写作与记录。';
+%>
+
+<section class="category-page" aria-labelledby="category-title">
+  <header class="category-header">
+    <p class="eyebrow">文章分类</p>
+    <h1 id="category-title"><%= categoryName %></h1>
+    <p><%= categoryDescription %></p>
+  </header>
+
+  <div class="category-list">
+    <% if (page.posts.length) { %>
+      <% page.posts.each(function(post) { %>
+        <article class="post-card">
+          <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'YYYY.MM.DD') %></time>
+          <h2><a href="<%= url_for(post.path) %>"><%= post.title %></a></h2>
+          <p><%= post.description || truncate(strip_html(post.excerpt || post.content), { length: 116 }) %></p>
+          <a class="read-more" href="<%= url_for(post.path) %>" aria-label="阅读《<%= post.title %>》">阅读全文<span aria-hidden="true"> →</span></a>
+        </article>
+      <% }); %>
+    <% } else { %>
+      <p class="empty-state">这个分类下还没有文章。</p>
+    <% } %>
+  </div>
+
+  <% if (page.total > 1) { %>
+    <nav class="pagination" aria-label="分类文章分页">
+      <%- paginator({ prev_text: '← 较新文章', next_text: '更早文章 →' }) %>
+    </nav>
+  <% } %>
+</section>

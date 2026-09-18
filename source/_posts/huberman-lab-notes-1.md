@@ -5,7 +5,7 @@ updated: 2024-09-09 23:08:31
 description: "Optimal Protocols for Studying & Learning,学习的最优策略"
 permalink: "2024/09/09/Huberman-Lab播客笔记1/"
 categories:
-  - "认知与心理"
+  - "专业知识"
 tags:
   - "学习"
 ---

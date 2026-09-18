@@ -3,7 +3,7 @@ title: 从这里开始
 date: 2026-09-17 20:30:00
 description: 为什么建立这个博客，以及 Hexo 与 Notion 在这里各自承担什么角色。
 categories:
-  - 写作
+  - 生活思考
 tags:
   - 博客
   - 长期主义

@@ -3,7 +3,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#171816" media="(prefers-color-scheme: dark)">
-  <% const pageTitle = page.title ? `${page.title} · ${config.title}` : `${config.title} · ${config.subtitle}`; %>
+  <% const contentTitle = page.title || page.category; %>
+  <% const pageTitle = contentTitle ? `${contentTitle} · ${config.title}` : (config.subtitle ? `${config.title} · ${config.subtitle}` : config.title); %>
   <% const pageDescription = page.description || config.description; %>
   <title><%= pageTitle %></title>
   <meta name="description" content="<%= strip_html(pageDescription) %>">

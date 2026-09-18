@@ -1,12 +1,12 @@
 # Site
-title: Mysterious-2001
-subtitle: 写作与思考
+title: Ray思世界
+subtitle: ""
 description: 记录值得反复思考的问题，以及逐渐清晰的答案。
 keywords:
   - 写作
   - 思考
   - 个人博客
-author: Mysterious-2001
+author: Ray
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -25,6 +25,9 @@ public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
+category_map:
+  生活思考: life
+  专业知识: knowledge
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:

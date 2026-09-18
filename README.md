@@ -1,4 +1,4 @@
-# Mysterious-2001 的个人博客
+# Ray思世界
 
 一个以长期写作为核心的 Hexo 博客，发布地址为：
 
@@ -19,7 +19,25 @@ npm run dev
 npm run new -- "文章标题"
 ```
 
-然后编辑 `source/_posts/` 中生成的 Markdown 文件。完成后运行：
+然后编辑 `source/_posts/` 中生成的 Markdown 文件，并为文章选择分类。
+
+每篇文章只使用一个一级分类：
+
+```yaml
+categories:
+  - 生活思考
+```
+
+或：
+
+```yaml
+categories:
+  - 专业知识
+```
+
+这两个分类会分别出现在 `/categories/life/` 和 `/categories/knowledge/` 页面。
+
+完成后运行：
 
 ```bash
 npm run build
