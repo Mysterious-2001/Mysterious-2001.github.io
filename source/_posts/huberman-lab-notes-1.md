@@ -1,11 +1,11 @@
 ---
-title: "Huberman Lab播客笔记1"
+title: "Huberman Lab播客笔记"
 date: 2024-09-09 22:45:10
 updated: 2024-09-09 23:08:31
 description: "Optimal Protocols for Studying & Learning,学习的最优策略"
-permalink: "2024/09/09/Huberman-Lab播客笔记1/"
+permalink: "2024/09/09/Huberman-Lab播客笔记/"
 categories:
-  - "专业知识"
+  - 生活思考
 tags:
   - "学习"
 ---
