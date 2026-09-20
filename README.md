@@ -45,6 +45,15 @@ npm run build
 
 生成的网站位于 `public/`，该目录不需要提交。
 
+## 本机草稿
+
+```bash
+npm run new -- draft "文章标题"
+npm run draft
+```
+
+草稿保存在 `source/_drafts/`，只通过本机的 <http://127.0.0.1:4000> 预览。该目录不会提交到 Git；常规 `npm run build` 也不会生成草稿页面。写完后运行 `npx hexo publish "文章标题"`，文章会移到 `source/_posts/`，之后便可按正常流程发布。
+
 ## 添加 Notion 外链
 
 公开 Notion 页面后，编辑 `themes/ink/_config.yml`：

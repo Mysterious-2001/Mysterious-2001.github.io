@@ -5,3 +5,4 @@ db.json
 *.log
 .DS_Store
 .sites-runtime/
+source/_drafts/
